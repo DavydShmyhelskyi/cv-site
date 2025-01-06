@@ -1,0 +1,256 @@
+/* CSS для заголовка titleEng */
+
+.about-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    transition: border-color 0.3s ease;
+    width: 50%;
+    line-height: 1.6;
+    flex: 1;
+    padding-right: 20px; /* Відступ між текстом і фото */
+}
+
+.about-text h2:hover {
+    border-color: #00bfff; /* Яскраво-блакитний колір при наведенні */
+}
+.about-text p span {
+    color: #00bfff; /* Акцент на "fun" */
+}
+.about-text h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    transition: border-color 0.3s ease;
+
+}
+.about-text h3 span {
+    color: #00bfff; /* Акцент на "fun" */
+    padding-left: 20px;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.circle-container {
+    position: relative;
+    width: 300px; /* Ширина кола */
+    height: 300px; /* Висота кола */
+    margin: 0 auto; /* Центрує коло */
+    border: 2px solid transparent; /* Для кращої видимості */
+    padding-left: 300px;
+    padding-top: 85px;
+    width: 50%;
+  }
+  
+  .icons {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transform: rotate(-30deg); /* Початковий кут */
+  }
+  
+  .item {
+    position: absolute;
+    width: 100px; /* Розмір іконки */
+  }
+  
+  .icons img:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .icons img:nth-child(2) { transform: rotate(72deg) translate(120px) rotate(-72deg); }
+  .icons img:nth-child(3) { transform: rotate(144deg) translate(120px) rotate(-144deg); }
+  .icons img:nth-child(4) { transform: rotate(216deg) translate(120px) rotate(-216deg); }
+  .icons img:nth-child(5) { transform: rotate(288deg) translate(120px) rotate(-288deg); }
+  
+  .info h2 span {
+    padding-left: 0px;
+        color: #00bfff; /* Акцент на "fun" */
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+  }
+
+  .OA {
+    width: 50%;
+  }
+  .oaoa{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .About-Me {
+    margin-top: 100px;
+  }
+ .Lamp{
+    width: 45%;
+    height: 45%;
+ }
+ .softskills{
+    padding-top: 50px;
+ }
+
+
+ .braaah{
+  padding-bottom: 50px;
+ }
+
+ .circle-container {
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє іконкам переноситися */
+  justify-content: end; /* Центрує іконки */
+  gap: 20px; /* Відступ між іконками */
+  padding: 20px 0;
+}
+
+.circle-container .item {
+  width: 100px; /* Базовий розмір іконок */
+  height: 100px;
+  object-fit: contain; /* Забезпечує пропорційність зображень */
+}
+
+@media (min-width: 780px) and (max-width: 1080px) {
+  .circle-container {
+    position: relative;
+    width: 200px; /* Ширина кола */
+    height: 300px; /* Висота кола */
+    margin: 0 auto; /* Центрує коло */
+    border: 2px solid transparent; /* Для кращої видимості */
+    padding-left: 0px;
+    padding-top: 85px;
+    width: 100%;
+  }
+  
+  .icons {
+    position:absolute ;
+    width: 50%;
+    height: 100%;
+    transform: rotate(0deg); /* Початковий кут */
+  }
+  
+  .item {
+    position: absolute;
+    width: 50px; /* Розмір іконки */
+  }
+  
+  .icons img:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .icons img:nth-child(2) { transform: rotate(0deg) translate(0px) rotate(-0deg); }
+  .icons img:nth-child(3) { transform: rotate(0deg) translate(-120px) rotate(-0deg); }
+  .icons img:nth-child(4) { transform: rotate(0deg) translate(-240px) rotate(-0deg); }
+  .icons img:nth-child(5) { transform: rotate(0deg) translate(240px) rotate(-0deg);        display: none !important; }
+
+  .circle-container .item {
+    width: 80px; /* Базовий розмір іконок */
+    height: 80px;
+    object-fit: contain; /* Забезпечує пропорційність зображень */
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  line-height: 1.6;
+  flex: 1;
+  padding-right: 20px; /* Відступ між текстом і фото */
+}
+.Lamp{
+  display: none !important;
+}
+}
+
+@media (max-width: 780px){
+  .circle-container{
+    display: none !important;
+  }
+
+  .circle-container {
+    position: relative;
+    width: 200px; /* Ширина кола */
+    height: 300px; /* Висота кола */
+    margin: 0 auto; /* Центрує коло */
+    border: 2px solid transparent; /* Для кращої видимості */
+    padding-left: 0px;
+    padding-top: 85px;
+    width: 100%;
+  }
+  
+  .icons {
+    position:absolute ;
+    width: 50%;
+    height: 100%;
+    transform: rotate(0deg); /* Початковий кут */
+  }
+  
+  .item {
+    position: absolute;
+    width: 50px; /* Розмір іконки */
+  }
+  
+  .icons img:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .icons img:nth-child(2) { transform: rotate(0deg) translate(0px) rotate(-0deg); }
+  .icons img:nth-child(3) { transform: rotate(0deg) translate(-120px) rotate(-0deg); }
+  .icons img:nth-child(4) { transform: rotate(0deg) translate(-240px) rotate(-0deg); }
+  .icons img:nth-child(5) { transform: rotate(0deg) translate(240px) rotate(-0deg);        display: none !important; }
+
+  .circle-container .item {
+    width: 80px; /* Базовий розмір іконок */
+    height: 80px;
+    object-fit: contain; /* Забезпечує пропорційність зображень */
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  line-height: 1.6;
+  flex: 1;
+}
+.Lamp{
+  display: none !important;
+}
+.oaoa {
+  display: flex;
+  flex-direction: column; /* Розташовує елементи у стовпець */
+  gap: 20px;
+  align-items: center; /* Центрує елементи по горизонталі */
+  padding: 0px;
+
+}
+.OA {
+  width: 100%;
+  border-radius: 10px;
+}
+}

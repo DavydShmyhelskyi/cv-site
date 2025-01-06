@@ -1,0 +1,76 @@
+.Blog {
+  display: flex-end;
+  align-items: center; /* Вирівнює елементи по вертикалі */
+  justify-content: center; /* Вирівнює елементи по горизонталі */
+  flex-wrap: wrap; /* Дозволяє переносити елементи в стовпець на малих екранах */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.text-content p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.photo {
+  display: flex;
+  justify-content: center; /* Центрує фото горизонтально */
+  padding-top: 6%;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.Blog p {
+  padding: 5px;
+  font-size: large;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 780px) {
+  .Blog {
+      flex-direction: column; /* Розташовує елементи у стовпець */
+      align-items: center;
+      margin: 0px;
+      padding: 0px;
+      padding-bottom: 20px;
+  }
+
+  .text-content {
+      margin-right: 0;
+      text-align: center; /* Центрує текст */
+  }
+
+  .text-content p {
+      font-size: 14px;
+  }
+
+  .photo {
+      padding-top: 20px;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 1080px) {
+  .text-content {
+      flex: 2;
+      margin-right: 0px;
+  }
+
+  .photo img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+  }
+}

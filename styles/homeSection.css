@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.container {
+  font-family:'Roboto'; 
+}
+.container {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5rem;}
+  30% {margin-top: -5rem;}
+  40% {margin-top: -10.5rem;}
+  60% {margin-top: -10.5rem;}
+  70% {margin-top: -5rem;}
+  80% {margin-top: -5rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+.myPhoto img
+{   
+     width: auto;
+    height: 550px;
+    padding-left: 100;
+    border-radius: 50px;
+}
+
+.homeNavi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; /* Відстань між фото і блоком кнопок */
+    padding: 100px;
+    padding-top: 50px;
+    margin-bottom: 150px;
+  }
+  .border{
+    width: 500px;
+    height: 550px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 20px;
+  }
+  .TextNavigation {
+    margin-top: 12%;
+    flex-grow: 1; /* Заповнює доступний простір */
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+  }
+
+  .TextNavigation h1 {
+    margin-bottom: 20px; /* Відступ між заголовком і кнопками */
+    text-align: center;
+    padding: 10px;
+    font-size:x-large;
+    font-weight: 900;
+  }
+  
+  .navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    gap: 40px; /* Відстань між кнопками */
+    
+  }
+
+  .awesome {
+    position: relative;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%; /* Фіксована ширина для вирівнювання */
+    height: 150%;
+
+  }
+  
+  .awesome::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid white;
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .awesome:hover {
+    transform: scale(1.1); /* Збільшує кнопку */
+  }
+  
+  .awesome:hover::before {
+    transform: rotate(-360deg);
+    opacity: 0; /* Контур поступово зникає */
+  }
+
+  
+  @media (min-width: 780px) and (max-width: 1080px) {
+    .myPhoto img
+    {   
+         width: auto;
+        height: 420px;
+        border-radius: 50px;
+    }
+    
+    .homeNavi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px; /* Відстань між фото і блоком кнопок */
+        padding: 100px;
+        padding-top: 50px;
+        margin-bottom: 150px;
+      }
+      .border{
+        width: 300px;
+        height: 420px;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        border-radius: 20px;
+      }
+      .TextNavigation {
+        margin-top: 0%;
+        flex-grow: 1; /* Заповнює доступний простір */
+        border: 3px solid #ffffff00;
+        border-radius: 20px;
+        padding:10px;
+        width: 300px;
+        height: 420px;
+      }
+    
+      .TextNavigation h1 {
+        margin-bottom: 20px; /* Відступ між заголовком і кнопками */
+        text-align: center;
+        padding: 0px;
+        font-size:x-large;
+        font-weight: 900;
+      }
+      
+      .navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+        gap: 40px; /* Відстань між кнопками */
+        
+      }
+    
+      .awesome {
+        position: relative;
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        width: 100%; /* Фіксована ширина для вирівнювання */
+        height: 100%;
+    
+      }
+  }
+  @media (max-width: 780px){
+    .homeNavi {
+      flex-direction: column; /* Вирівнювання елементів у колонку */
+      gap: 20px; /* Менший розрив між компонентами */
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+  
+    .myPhoto img {
+      height: 250px;
+      width: 100%;
+      border-radius: 15px; /* Менше заокруглення */
+      object-fit: cover; /* Зберігає пропорції */
+    }
+  
+    .border {
+      width: 100%;
+      height: auto;
+      margin: 0 auto; /* Центрування */
+      padding: 0px;
+      border: 0px solid transparent;
+    }
+  
+    .TextNavigation {
+      margin-top: 0%;
+      padding: 15px;
+      width: 100%;
+      height: auto;
+      border: 0px solid transparent;
+    }
+  
+    .TextNavigation h1 {
+      font-size: 1.2rem; /* Менший розмір тексту */
+    }
+  
+    .navigation {
+      grid-template-columns: 1fr; /* В одну колонку */
+      gap: 30px;
+    }
+    .awesome::before {display: none !important;}
+    .awesome{
+      border-radius: 40px;
+    }
+
+
+
+
+    .container {
+      font-size: 1.2rem; /* Подвоєний розмір шрифту */
+      flex-direction: column; /* Розташовуємо елементи вертикально */
+      text-align: center; /* Центруємо текст */
+      padding: 1rem; /* Подвоєні відступи */
+    }
+
+    .container p{
+      font-size: 1.6rem; /* Подвоєний розмір шрифту */
+    }
+  
+    .animation {
+      margin-left: 0; /* Прибираємо лівий відступ */
+      height: 70px; /* Подвоєна висота контейнера анімації */
+    }
+  
+    .animation > div > div {
+      height: 1.7rem; /* Подвоєна висота текстових блоків */
+      margin-bottom: 3.2rem; /* Подвоєний відступ між блоками */
+      padding: 0.2rem 0.8rem; /* Подвоєні внутрішні відступи */
+      font-size: 1rem; /* Подвоєний розмір шрифту */
+    }
+  
+    @keyframes text-animation {
+      0% {margin-top: 0;}
+      10% {margin-top: 0;}
+      20% {margin-top: -4.8rem;} /* Подвоєний розмір */
+      30% {margin-top: -4.8rem;}
+      40% {margin-top: -9.6rem;} /* Відповідно до збільшеного тексту */
+      60% {margin-top: -9.6rem;}
+      70% {margin-top: -4.8rem;} /* Повернення до попереднього стану */
+      80% {margin-top: -4.8rem;}
+      90% {margin-top: 0;}
+      100% {margin-top: 0;}
+    }
+  }

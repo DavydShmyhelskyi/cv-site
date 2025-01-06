@@ -1,0 +1,292 @@
+.github-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між елементами */
+    margin-bottom: 20px; /* Відступи між елементами */
+}
+
+.github-avatar {
+    width: 50px; /* Ширина зображення */
+    height: 50px; /* Висота зображення */
+    border-radius: 50%; /* Робить зображення круглим */
+    object-fit: cover; /* Підганяє зображення під рамку */
+    cursor: pointer; /* Змінює курсор на руку при наведенні */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.github-avatar::before{
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.github-avatar:hover {
+  transform: scale(1.1); /* Збільшує кнопку */
+}
+
+.github-item a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.github-item a:hover {
+    color: #00509e; /* Змінює колір при наведенні */
+}
+
+.github-item .description {
+    margin-left: auto; /* Вирівнює опис справа */
+    color: #ffffff;
+    font-size: 14px;
+    max-width: 600px; /* Опціонально: обмеження ширини опису */
+    text-align: left; /* Текст вирівняний ліворуч */
+}
+.github-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між елементами */
+    margin-bottom: 20px; /* Відступи між елементами */
+    position: relative; /* Встановлюємо для правильного позиціонування опису */
+}
+
+.github-item .description {
+    display: none; /* Ховаємо опис за замовчуванням */
+    position: absolute;
+    left: 200px; /* Вирівнюємо опис праворуч від посилання */
+    top: 50%; /* Центруємо опис по вертикалі */
+    transform: translateY(-50%); /* Вирівнюємо текст по центру */
+    background-color: rgba(0, 0, 0, 0.8); /* Напівпрозоре тло */
+    color: #fff; /* Колір тексту */
+    padding: 5px 10px; /* Відступи всередині опису */
+    border-radius: 5px; /* Закруглені кути */
+    white-space: nowrap; /* Запобігаємо переносу тексту */
+    z-index: 10;
+}
+
+.github-item a:hover + .description {
+    display: block; /* Показуємо опис при наведенні на посилання */
+}
+
+
+
+
+
+.box {
+    --box-width: 300px;
+    /* background-color: #f9f; */
+    border-radius: 50%;
+    /* Chromium work-around */
+    clip-path: circle(150px at 150px);
+    height: var(--box-width);
+    overflow: hidden;
+    position: relative;
+    width: var(--box-width);
+    margin-top: -70px;
+    margin-right: 100px;
+  }
+  
+  .activator {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .activator.white {
+    clip-path: polygon(
+      35.66% 85.67%,
+      44.99% 83.13%,
+      54.08% 90.2%,
+      55.1% 101.27%,
+      64.89% 94.58%,
+      74.59% 86.97%,
+      82.83% 78.07%,
+      88.86% 67.82%,
+      91.48% 56.61%,
+      90.3% 42.78%,
+      86.06% 31.29%,
+      77.45% 21.44%,
+      67.34% 14.67%
+    );
+  }
+  
+  .activator.black {
+    /* background-color: red; */
+    clip-path: polygon(
+      35% 86%,
+      23% 79.33%,
+      15.86% 70.67%,
+      11.63% 61.78%,
+      8.63% 52.71%,
+      8.45% 43.74%,
+      10.78% 32.35%,
+      16.65% 22.15%,
+      26.05% 12.86%,
+      34.44% 6.24%,
+      44.4% 0%,
+      47.15% 11%,
+      56.69% 17.26%,
+      66.57% 14.04%
+    );
+  }
+  
+  .activator:hover {
+    /* Safari work-around */
+    clip-path: circle(150px at 150px);
+    cursor: alias;
+    z-index: 1;
+  }
+  
+  .drop {
+    background-color: #ffffff00;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+  }
+  
+  .cats {
+    pointer-events: none;
+    position: absolute;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .activator.black:hover ~ .drop {
+    background-color: #f2f2f2;
+  }
+  
+  .activator.black:hover ~ .cats {
+    transform: translateX(45px) translateY(95px) scale(1.4) rotate(0deg);
+  }
+  
+  .activator.white:hover ~ .drop {
+    background-color: #1a1a1a;
+  }
+  
+  .activator.white:hover ~ .cats {
+    transform: translateX(45px) translateY(95px) scale(1.4) rotate(180deg);
+  }
+  
+  .text {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 32px;
+  }
+  
+
+
+  .GitHubItems{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  @keyframes highlight {
+    to {
+      background-position: 0;
+    }
+  }
+  
+  mark {
+    color: #2e5205;
+    animation: highlight linear forwards;
+    animation-timeline: view(60% 20%);
+    background: linear-gradient(
+      to right,
+      oklch(0.86 0.19 84.89 / 1) 50%,
+      oklch(0.86 0.19 84.89 / 0) 50%
+    );
+    background-position: 100%;
+    background-size: 200% 100%;
+    border-radius: 0.125rem;
+    padding-inline: 0.125rem;
+  }
+
+  .Skills {
+    position: relative;
+}
+
+.sticky-photo {
+    position: sticky; /* Елемент прилипає */
+    top: 15%; /* Фіксується в середині екрана */
+
+}
+
+.sticky-photo img {
+  position: absolute; 
+ margin-top: 50px;
+  margin-left: 70%;
+    width: 35%; /* Фіксований розмір фото */
+    border-radius: 100px;
+}
+
+
+.info1 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.Resume img {
+  width: 80px;
+}
+
+.pdf{
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.pdf::before {
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.pdf:hover {
+  transform: scale(1.1); /* Збільшує кнопку */
+}
+.pdf1:hover{
+  color: #278bee; /* Змінює колір при наведенні */
+}
+.cv-link {
+  text-decoration: none; /* Забирає підкреслення тексту */
+  color: inherit; /* Зберігає колір тексту, встановлений у батьківських стилях */
+  display: inline-block; /* Дає змогу обгорнути як текст, так і зображення */
+  text-align: center; /* Центрує текст і зображення */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom:40px;
+font-size: x-large;
+}
+
+.Contact p{
+padding: 5px;
+font-size:large;
+}
+
+@media (min-width: 780px) and (max-width: 1080px) {
+  .info1 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 780px){
+  .sticky-photo {
+    display: none !important;
+  }
+  .info1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}

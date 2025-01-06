@@ -1,0 +1,76 @@
+/* CSS для заголовка titleEng */
+.titleEng {
+    padding: 5px;
+    padding-left: 20px;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.titleEng h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    transition: border-color 0.3s ease;
+}
+
+.titleEng h2:hover {
+    border-color: #00bfff; /* Яскраво-блакитний колір при наведенні */
+}
+
+.titleEng h2 span {
+    color: #00bfff; /* Акцент на "fun" */
+}
+.titleEng h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    transition: border-color 0.3s ease;
+
+}
+@media (min-width: 780px) and (max-width: 1080px){
+    .titleEng {
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+}
+@media (max-width: 780px){
+    .titleEng {
+        padding: 5px;
+        padding-left: 20px;
+        padding-top: 0px;
+        text-align: center;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    
+    .titleEng h2 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 3px solid transparent;
+        display: inline-block;
+        transition: border-color 0.3s ease;
+    } 
+}
