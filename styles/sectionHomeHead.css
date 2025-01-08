@@ -1,92 +1,73 @@
-
-
-
-/* CSS для заголовка titleEng */
+/* Основний стиль для titleEng */
 .titleEng {
-    display: flex; 
-    padding: 5px;
-    padding-left: 20px;
-    padding-top: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    /*flex. i don't know how, but that line dousen't want to be commited*/
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
-
+    display: flex; /* Застосування Flexbox */
+    flex-wrap: wrap; /* Дозволяє переносити елементи на новий рядок */
+    justify-content: space-between; /* Простір між елементами */
+    align-items: center; /* Вертикальне центрування елементів */
+    gap: 10px; /* Відступи між елементами */
+    padding: 5px 20px 20px 20px; /* Внутрішні відступи */
+    margin-bottom: 20px; /* Відступ знизу */
+    width: 100%; /* Забезпечує повну ширину контейнера */
+    text-align: center; /* Центрування тексту в заголовках */
 }
 
+/* Стиль для заголовків h2 */
 .titleEng h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0;
-    padding: 10px 0;
-    border-bottom: 3px solid transparent;
-    display: inline-block;
-    transition: border-color 0.3s ease;
+    font-size: 28px; /* Розмір тексту */
+    font-weight: bold; /* Жирний текст */
+    color: #ffffff; /* Білий колір тексту */
+    margin: 0; /* Немає зовнішніх відступів */
+    padding: 10px 0; /* Внутрішні відступи зверху і знизу */
+    border-bottom: 3px solid transparent; /* Прозорий бордер під текстом */
+    display: inline-block; /* Текст в одному рядку */
+    transition: border-color 0.3s ease; /* Плавний перехід кольору бордера */
+    flex: 1; /* Рівномірний розподіл елементів */
+    text-align: center; /* Центрування тексту в заголовку */
 }
 
+/* Стиль для hover ефекту заголовків */
 .titleEng h2:hover {
     border-color: #00bfff; /* Яскраво-блакитний колір при наведенні */
 }
-.back{
+
+/* Акцент на текст "Back to menu" */
+.titleEng h2 span {
+    color: #00bfff; /* Акцент блакитним кольором */
+    font-size: 20px; /* Менший розмір тексту */
+}
+
+/* Скрите відображення елементу .back */
+.back {
     display: none !important;
 }
-.titleEng h2 span {
-    color: #00bfff; /* Акцент на "fun" */
-    font-size: 20px;
-}
-.titleEng h3{
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0;
-    padding: 10px 0;
-    border-bottom: 3px solid transparent;
-    display: inline-block;
-    transition: border-color 0.3s ease;
 
-}
-@media (min-width: 780px) and (max-width: 1080px){
+/* Стилі для ширини екрану 780-1080px */
+@media (min-width: 780px) and (max-width: 1080px) {
     .titleEng {
-        display: flex; 
-        padding: 5px;
-        padding-left: 10px;
-        padding-top: 50px;
-        text-align: center;
-        margin-bottom: 20px;
-        justify-content: space-between;
-        gap: 5px;
+        padding: 5px 10px 20px 10px; /* Відступи зменшені */
+        justify-content: space-between; /* Простір між елементами */
+        gap: 10px; /* Залишено відступи */
     }
 }
-@media (max-width: 780px){
-    .back{
-        display: flex !important;
+
+/* Стилі для екранів менше 780px */
+@media (max-width: 780px) {
+    .back {
+        display: flex !important; /* Відображення кнопки "Back" */
     }
     .titleEng {
-        display: flex; 
-        padding: 5px;
-        padding-left: 20px;
-        padding-top: 0px;
-        text-align: center;
-        margin-bottom: 0px;
-        justify-content: space-between;
-        gap: 5px;
+        flex-direction: column; /* Елементи в колонку */
+        align-items: center; /* Центрування по горизонталі */
+        padding: 5px 20px 0px 20px; /* Внутрішні відступи */
+        margin-bottom: 0px; /* Немає зовнішніх відступів */
+        gap: 10px; /* Відстань між елементами */
     }
-    
     .titleEng h2 {
-        font-size: 28px;
-        font-weight: bold;
-        color: #ffffff;
-        margin: 0;
-        padding: 10px 0;
-        border-bottom: 3px solid transparent;
-        display: inline-block;
-        transition: border-color 0.3s ease;
-    } 
+        flex: unset; /* Відключення рівномірного розподілу */
+        width: 100%; /* Заголовки займають всю ширину */
+        text-align: center; /* Центрування тексту */
+    }
     .titleEng h2 span {
-        color: #00bfff; /* Акцент на "fun" */
-        font-size: 20px;
+        font-size: 18px; /* Менший розмір тексту */
     }
 }
