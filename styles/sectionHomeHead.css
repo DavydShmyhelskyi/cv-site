@@ -5,7 +5,8 @@
     padding-top: 50px;
     text-align: center;
     margin-bottom: 20px;
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
 }
@@ -24,9 +25,12 @@
 .titleEng h2:hover {
     border-color: #00bfff; /* Яскраво-блакитний колір при наведенні */
 }
-
+.back{
+    display: none !important;
+}
 .titleEng h2 span {
     color: #00bfff; /* Акцент на "fun" */
+    font-size: 20px;
 }
 .titleEng h3{
     font-size: 20px;
@@ -52,6 +56,9 @@
     }
 }
 @media (max-width: 780px){
+    .back{
+        display: flex !important;
+    }
     .titleEng {
         padding: 5px;
         padding-left: 20px;
