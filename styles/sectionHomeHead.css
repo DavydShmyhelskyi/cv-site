@@ -3,6 +3,7 @@
 
 /* CSS для заголовка titleEng */
 .titleEng {
+    
     padding: 5px;
     padding-left: 20px;
     padding-top: 50px;
@@ -12,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
-    display: flex; 
+
 }
 
 .titleEng h2 {
