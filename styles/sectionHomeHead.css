@@ -8,10 +8,11 @@
     padding-top: 50px;
     text-align: center;
     margin-bottom: 20px;
-    display: flex; /*flex. i don't know how, but that line dousen't want to be commited*/
+    /*flex. i don't know how, but that line dousen't want to be commited*/
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
+    display: flex; 
 }
 
 .titleEng h2 {
