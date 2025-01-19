@@ -215,7 +215,7 @@
       height: 250px;
       width: 100%;
       border-radius: 15px; /* Менше заокруглення */
-      object-fit: cover; /* Зберігає пропорції */
+      object-fit: contain; /* Зберігає пропорції */
     }
   
     .border {
